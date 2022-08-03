@@ -1,0 +1,25 @@
+package com.loiane.estruturadados.pilha;
+
+import com.loiane.estruturadados.base.EstruturaEstatica;
+
+public class Pilha<T> extends EstruturaEstatica<T> {
+
+	public Pilha() {
+		super();
+	}
+	
+	public Pilha(int capacidade) {
+		super(capacidade);
+	}
+	
+	public boolean empilha(T elemento) {
+		return super.adiciona(elemento);
+	}
+	
+	public T topo() {
+		if (this.estaVazia()) {
+			return null;
+		}
+		return this.elementos[tamanho-1];
+	}
+}

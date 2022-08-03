@@ -5,6 +5,7 @@ public class Lista<T> {
 	private T[] elementos;
 	private int tamanho;
 	
+	@SuppressWarnings("unchecked")
 	public Lista(int capacidade) {
 		this.elementos = (T[]) new Object[capacidade];
 		this.tamanho = 0;
@@ -73,10 +74,12 @@ public class Lista<T> {
 		
 	}
 	
+	@SuppressWarnings("unchecked")
 	public void limpar() {
 		this.elementos = (T[]) new Object[this.elementos.length];
 	}
 	
+	@SuppressWarnings("unchecked")
 	private void aumentaCapacidade() {
 		
 		if (this.tamanho == this.elementos.length) {
